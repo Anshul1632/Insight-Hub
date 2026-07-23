@@ -29,5 +29,5 @@ ALLOWED_EXTENSIONS = {".csv", ".xlsx", ".xls"}
 # CORS - the React dev server / deployed frontend origin(s)
 CORS_ORIGINS = os.getenv(
     "INSIGHTHUB_CORS_ORIGINS",
-    "http://localhost:5173,http://localhost:3000"
+    "http://localhost:5173,http://localhost:3000,https://insight-hub-three-iota.vercel.app"
 ).split(",")
