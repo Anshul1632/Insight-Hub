@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.env
+insighthub.db
+storage/uploads/*
+storage/cleaned/*
+!storage/uploads/.gitkeep
+!storage/cleaned/.gitkeep
+venv/
+.venv/

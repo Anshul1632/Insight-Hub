@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  @apply font-sans text-ink bg-paper;
+  background-image:
+    linear-gradient(#DCE3DF 1px, transparent 1px),
+    linear-gradient(90deg, #DCE3DF 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { background: #C3CDC8; border-radius: 4px; }
+
+@keyframes scanIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-scan-in { animation: scanIn 0.35s ease both; }
+
+.ih-dropzone {
+  border: 2px dashed #C3CDC8;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.6);
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.ih-dropzone.drag-active {
+  border-color: #1F5C50;
+  background: #DCEAE6;
+}
+
+.ih-table th {
+  @apply font-mono text-[11px] tracking-wide uppercase text-inkSoft border-b border-lineStrong;
+}
+.ih-table td {
+  @apply border-b border-line text-sm;
+}
+.ih-table tr:hover td {
+  @apply bg-pineSoft;
+}
